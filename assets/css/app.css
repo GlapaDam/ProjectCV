@@ -1,0 +1,471 @@
+/*******************************************************************
+GLOBAL
+********************************************************************/
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Oxygen,
+        Helvetica,
+        sans-serif;
+    background-image: url(/assets/img/bg.png);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #222222;
+
+}
+
+main {
+    padding: 0 0 0 150px;
+}
+
+.container {
+    background-color: #ffffff;
+    max-width: 1170px;
+    padding: 15px 15px 30px 15px;
+    box-shadow: 0 1px 33px rgba(0, 0, 0, .15);
+    margin: 0 auto;
+    position: relative;
+}
+
+.container::after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    height: 75px;
+    width: 3px;
+    background-color: #ff724c;
+}
+
+.container::before {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    height: 75px;
+    width: 3px;
+    background-color: #ff724c;
+}
+
+.main-header {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.main-header h2 {
+    font-size: 60px;
+    color: #726c6c;
+    margin: 0 0 0 0;
+}
+
+.main-header h5 {
+
+    color: #ffffff;
+    background-color: #ff724c;
+    margin: 0;
+    padding: 3px 10px;
+    display: inline-block;
+}
+
+/******************************************
+NAVIATION
+******************************************/
+
+
+.nav {
+    position: fixed;
+    width: 150px;
+    height: 100%;
+    background-color: #ffffff;
+    top: 0;
+    left: 0;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, .2);
+
+}
+
+.nav .my-photo {
+    padding: 20px 30px;
+}
+
+.nav .my-photo img {
+    width: 100%;
+    border-radius: 8px;
+    display: block;
+}
+
+.nav .my-name {
+    text-align: center;
+    margin: 0 0 20px 0;
+    font-size: 24px;
+    font-weight: 700;
+    color: #ff724c;
+    font-family: Oxygen, Helvetica, sans-serif;
+}
+
+.nav .menu {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.nav .menu li:last-child {
+    border-bottom: 1px solid rgba(58, 53, 53, 0.3);
+}
+
+.nav .menu li a {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    text-align: center;
+    padding: 10px 0;
+    color: #222222;
+    border-top: 1px solid rgba(27, 21, 21, 0.3);
+    position: relative;
+}
+
+
+
+.nav .menu li a.active::after {
+    content: "";
+    height: 100%;
+    width: 0;
+    top: 0;
+    right: 0;
+    background-color: #ff724c;
+    position: absolute;
+
+
+}
+
+.nav .menu li a.active:hover ::after {
+    content: "";
+    height: 100%;
+    width: 4px;
+    top: 0;
+    right: 0;
+    background-color: #ff724c;
+    position: absolute;
+    transition: 0.9s;
+
+
+}
+
+.nav .menu li a i {
+    margin: 5px;
+    color: #ff724c;
+
+}
+
+/******************************************
+NAME SECTION
+******************************************/
+
+
+section.name {
+    min-height: 100vh;
+    /*procenty względem rodzica, a vh jeśli nie */
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ff724c;
+
+
+}
+
+section.name h1 {
+    margin: 0 0 40px 0;
+    font-size: 70px;
+    color: #ff724c;
+}
+
+section.name p {
+    margin: 0;
+    font-size: 26px;
+    font-weight: 300;
+}
+
+/*******************************************************************
+SECTION ABOUT ME
+*********************************************************************/
+
+.about-me {
+    padding: 50px 0;
+}
+
+.personal-info {
+    display: flex;
+    padding: 0 -15px;
+}
+
+.personal-info .picture,
+.personal-info .info,
+.personal-info .data {
+    width: calc(100%/3);
+    padding: 0 15px;
+}
+
+
+.personal-info .picture img {
+    display: block;
+    width: 100%;
+}
+
+.personal-info .info {
+    text-align: justify;
+}
+
+.personal-info .info p {
+    margin: 0 0 1px 0;
+}
+
+.personal-info .data .personal-data {
+    list-style-type: none;
+    margin: 0 0 30px 0;
+    padding: 0;
+}
+
+
+.personal-info .data .personal-data li {
+    margin: 0 0 10px 0;
+
+}
+
+.personal-info .data .personal-data li span {
+    font-weight: 200;
+    color: #ff724c;
+}
+
+.personal-info .data .social {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.personal-info .data .social li {
+    margin: 0 7px 0 0;
+}
+
+.personal-info .data .social li:last-child {
+    margin: 0;
+
+}
+
+.personal-info .data .social li a {
+    display: flex;
+    width: 35px;
+    height: 35px;
+    border: 1px solid #e5e5e5;
+    color: #222222;
+    /* centrowanie w osi x */
+    justify-content: center;
+    /* centrowanie w osi y */
+    align-items: center;
+    text-decoration: none;
+    transition: .5s;
+}
+
+.personal-info .data .social li a:hover {
+    color: #ffffff;
+    background-color: #ff724c;
+    border-color: #ff724c;
+}
+
+.testimontials {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 30px -15px 0 -15px;
+    background-color: #ffffff;
+    padding: 15px 15px 15px 15px;
+}
+
+.testimontial {
+
+    width: 50%;
+    padding: 0 15px;
+    margin: 0 0 30px 0;
+}
+
+.testimontial .text {
+    background-color: #fcfcfc;
+    border: 1px solid #e5e5e5;
+    color: #555555;
+    font-size: 16px;
+    padding: 15px 15px 30px 15px;
+
+}
+
+.person {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin: -15px 0 0;
+}
+
+.person img {
+    display: block;
+    width: 60px;
+    height: 60px;
+    margin: 0 10px;
+    border: 1px solid #e5e5e5;
+}
+
+.person .name {
+    font-size: 15px;
+
+    margin: 0;
+}
+
+.person .company {
+    font-size: 12px;
+    color: #ff724c;
+    font-style: italic;
+    margin: 0;
+}
+
+/*******************************************************************
+SECTION Blog
+*********************************************************************/
+
+
+
+.photogallery {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 15px 15px 0;
+    background-color: #ffffff;
+    padding: 15px 30px 30px;
+    position: relative;
+
+}
+
+.photogallery .photo {
+    width: 50%;
+    padding: 0 15px 0 15px;
+    margin: 0 0 30px 0;
+
+}
+
+.photogallery .photo .box-style {
+    border: 1px solid rgba(58, 53, 53, 0.3);
+    box-shadow: 5px 5px 10px;
+}
+
+.photogallery .photo .top {
+    position: relative;
+}
+
+.photogallery .photo .top .date {
+    position: absolute;
+    box-sizing: border-box;
+    width: 44px;
+    height: 48px;
+    background-color: #ff724c;
+    right: 16px;
+    bottom: -10px;
+    z-index: 10;
+    color: #ffffff;
+    text-align: center;
+    text-size-adjust: 100%;
+    padding: 5px;
+}
+
+.photogallery .photo .top .date .day {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 400;
+    font-style: PT Sans, Helvetica, sans-serif;
+    color: #ffffff;
+}
+
+.photogallery .photo .top .date .month {
+    text-align: center;
+    font-size: 12px;
+    font-weight: 400;
+    font-style: PT Sans, Helvetica, sans-serif;
+    color: #ffffff;
+}
+
+.photogallery .photo .box-style p.title {
+    color: rgb(34, 34, 34);
+    text-align: center;
+    font-size: 13px;
+    font-weight: 300;
+    font-style: PT Sans, Helvetica, sans-serif;
+
+}
+
+.photogallery .photo .box-style p.description {
+    color: rgb(34, 34, 34);
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+    font-style: Oxyen, Helvetica, sans-serif;
+
+}
+
+
+.photogallery .photo a img {
+    display: block;
+    width: 100%;
+    transition: 0.3s;
+    position: relative;
+}
+
+.photogallery .photo a::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    top: 0;
+    left: 0;
+    opacity: .0;
+}
+
+.photogallery .photo a:hover {
+    display: block;
+}
+
+.photogallery .photo a:hover::after {
+    opacity: 0.5;
+}
+
+.photogallery .photo a i {
+    font-size: 70px;
+    position: absolute;
+    color: #ffffff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+    opacity: 0;
+    transition: 0.5s;
+
+}
+
+.photogallery .photo a:hover i {
+    opacity: 1;
+}
+
+/*  */
+/* .photogallery .photo .box-style a .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    opacity: 0;
+    transition: 0.5s;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.photogallery .photo a:hover .overlay {
+    opacity: 0.5;
+} */
